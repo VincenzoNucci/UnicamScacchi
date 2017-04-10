@@ -22,7 +22,7 @@ namespace Scacchi.Modello.Pezzi {
             if (differenzaColonne == 0 && differenzaTraverse == 1 ||
                 differenzaColonne == 1 && differenzaTraverse == 0)
                 return true;
-            else if (differenzaColonne == differenzaTraverse)
+            else if (differenzaColonne == differenzaTraverse && differenzaColonne == 1 && differenzaTraverse == 1)
                 return true;
             else
                 return false;
