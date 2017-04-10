@@ -653,5 +653,137 @@ namespace Scacchi.Modello
         //Then
         Assert.True(esito);
         }
+
+        
+
+
+
+        [Fact]
+        public void TorreBiancaPuoMuovereOrizzontalmenteVersoDestra()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.E,
+            traversaArrivo : Traversa.Quinta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreBiancaPuoMuovereOrizzontalmenteVersoSinistra()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.E,
+            traversaArrivo : Traversa.Terza
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreBiancaPuoMuovereVerticalmenteVersoLAlto()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.F,
+            traversaArrivo : Traversa.Quarta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreBiancaPuoMuovereVerticalmenteVersoIlBasso()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.D,
+            traversaArrivo : Traversa.Quarta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreNeraPuoMuovereOrizzontalmenteVersoDestra()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.E,
+            traversaArrivo : Traversa.Quinta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreNeraPuoMuovereOrizzontalmenteVersoSinistra()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.E,
+            traversaArrivo : Traversa.Terza
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreNeraPuoMuovereVerticalmenteVersoLAlto()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.F,
+            traversaArrivo : Traversa.Quarta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void TorreNeraPuoMuovereVerticalmenteVersoIlBasso()
+        {
+        //Given
+        IPezzo torre = new Torre(Colore.Bianco);
+        //When
+        bool esito = torre.PuòMuovere(
+            colonnaPartenza : Colonna.E,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.D,
+            traversaArrivo : Traversa.Quarta
+        );
+        //Then
+        Assert.True(esito);
+        }
     }
 }
