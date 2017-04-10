@@ -335,6 +335,70 @@ namespace Scacchi.Modello
         }
 
         [Fact]
+        public void AlfiereBiancoPuoMuovereDiagonalmenteVersoLAltoADestra()
+        {
+        //Given
+        IPezzo alfiere = new Alfiere(Colore.Bianco);
+        //When
+        bool esito = alfiere.PuòMuovere(
+            colonnaPartenza : Colonna.C,
+            traversaPartenza : Traversa.Terza,
+            colonnaArrivo : Colonna.E,
+            traversaArrivo : Traversa.Quinta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void AlfiereBiancoPuoMuovereDiagonalmenteVersoIlBassoADestra()
+        {
+        //Given
+        IPezzo alfiere = new Alfiere(Colore.Bianco);
+        //When
+        bool esito = alfiere.PuòMuovere(
+            colonnaPartenza : Colonna.C,
+            traversaPartenza : Traversa.Terza,
+            colonnaArrivo : Colonna.B,
+            traversaArrivo : Traversa.Quarta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void AlfiereBiancoPuoMuovereDiagonalmenteVersoIlBassoASinistra()
+        {
+        //Given
+        IPezzo alfiere = new Alfiere(Colore.Bianco);
+        //When
+        bool esito = alfiere.PuòMuovere(
+            colonnaPartenza : Colonna.F,
+            traversaPartenza : Traversa.Sesta,
+            colonnaArrivo : Colonna.D,
+            traversaArrivo : Traversa.Quarta
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
+        public void AlfiereBiancoPuoMuovereDiagonalmenteVersoLAltoASinistra()
+        {
+        //Given
+        IPezzo alfiere = new Alfiere(Colore.Bianco);
+        //When
+        bool esito = alfiere.PuòMuovere(
+            colonnaPartenza : Colonna.B,
+            traversaPartenza : Traversa.Quarta,
+            colonnaArrivo : Colonna.D,
+            traversaArrivo : Traversa.Seconda
+        );
+        //Then
+        Assert.True(esito);
+        }
+
+        [Fact]
         public void ReNeroPuoMuovereDiagonalmenteVersoLAltoASinistra()
         {
         //Given
