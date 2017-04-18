@@ -19,6 +19,8 @@ namespace Scacchi.Modello.Pezzi {
             //o viceversa ma mai la stessa per entrambe allora puo muovere
             var differenzaColonne = Math.Abs(colonnaArrivo - colonnaPartenza);
             var differenzaTraverse = Math.Abs(traversaArrivo - traversaPartenza);
+            if (differenzaColonne == 0 && differenzaTraverse == 0)
+                return false;
             if (differenzaColonne == 2 && differenzaTraverse == 1)
                 return true;
             else if (differenzaTraverse == 2 && differenzaColonne == 1)

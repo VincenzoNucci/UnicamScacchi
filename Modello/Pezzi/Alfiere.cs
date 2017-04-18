@@ -19,7 +19,7 @@ namespace Scacchi.Modello.Pezzi {
             //allora puo muovere
             var differenzaColonne = Math.Abs(colonnaArrivo - colonnaPartenza);
             var differenzaTraverse = Math.Abs(traversaArrivo - traversaPartenza);
-            return differenzaColonne == differenzaTraverse;
+            return (differenzaColonne != 0) == (differenzaTraverse != 0);
         }
     }
 }

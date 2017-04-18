@@ -20,6 +20,8 @@ namespace Scacchi.Modello.Pezzi {
             //la stessa condizione per l'alfiere
             var differenzaColonne = Math.Abs(colonnaArrivo - colonnaPartenza);
             var differenzaTraverse = Math.Abs(traversaArrivo - traversaPartenza);
+            if (differenzaColonne == 0 && differenzaTraverse == 0)
+                return false;
             if (differenzaColonne == 0 && differenzaTraverse >= 1 ||
                 differenzaColonne >= 1 && differenzaTraverse == 0)
                 return true;
